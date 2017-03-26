@@ -1,0 +1,149 @@
+@font-face {  font-family: "微软雅黑";  src: url(../fonts/MSYH.TTC);  }
+html,body,input,a,label,span,p,button,img,textarea,select,table{  font-family: "微软雅黑";border: none;outline: none;}
+a,input,textarea,span,select,div {  color: #505050; }
+textarea{resize: none;}
+a{  text-decoration: none;}
+.container{  width: 100%; background: #F0F2F5;  }
+/*画面div*/
+.full-box{height: 100%;width: 100%;}
+.width-full{width: 100%;}
+.height-full{height: 100%;}
+/*块分区*/
+.part-panel{background-color:#ffffff;}
+
+/**
+弹性盒式布局
+row-box水平布局
+row-box-rev水平反向（从右到左）
+col-box垂直布局
+col-box-rev垂直反向
+ */
+.row-box,.row-box-rev,.col-box,.col-box-rev{
+    display: -moz-box;/*Firefox*/  display: -ms-flexbox;/*IE10*/  display: -webkit-box;/*Safari*/  display: -webkit-flex;/*Chrome, WebKit*/  display: flex;
+    width: 100%;
+}
+.row-box{  flex-direction: row;  -webkit-flex-direction: row;  }
+.row-box-rev{  flex-direction: row-reverse;  -webkit-flex-direction: row-reverse;  }
+.col-box{  flex-direction: column;  -webkit-flex-direction: column;  }
+.col-box-rev {  flex-direction: column-reverse;-webkit-flex-direction: column-reverse;  }
+/**
+ * 盒式布局不换行
+ */
+.no-warp{  flex-wrap: nowrap;  -webkit-flex-wrap: nowrap;  }
+/**
+居中对齐
+ */
+.v-center{  align-items: center;  -webkit-align-items: center;  }
+/**
+顶部对齐
+ */
+.v-start{  align-items: flex-start;  -webkit-align-items: flex-start;  }
+/**
+底部对齐
+ */
+.v-end{  align-items: flex-end;  -webkit-align-items: flex-end;  }
+/**
+垂直撑满
+ */
+.v-full{  align-items: stretch;  -webkit-align-items: stretch;  }
+/**
+水平居中
+ */
+.h-center{  justify-content: center;  -webkit-justify-content: center;  }
+/**
+等距分布（" a  a  a "模式）
+ */
+.h-space-around{  justify-content: space-around;  -webkit-justify-content: space-around;  }
+/**
+等距分布（"a  a  a"模式）
+ */
+.h-space-between{  justify-content: space-between;  -webkit-justify-content: space-between;  }
+/**
+垂直居中
+ */
+.v-center{  align-content: center;  -webkit-align-content: center;  }
+/**
+等距分布（" a  a  a "模式）
+ */
+.v-space-around{  align-content: space-around;  -webkit-align-content: space-around;  }
+/**
+等距分布（"a  a  a"模式）
+ */
+.v-space-between{  align-content: space-between;  -webkit-align-content: space-between;  }
+    /**
+    盒式布局子元素class
+     */
+    .box-item{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .box-item-left-margin{
+        margin-left: 4%;
+    }
+    .box-item-right-margin{
+        margin-right: 4%;
+    }
+    /**
+    子元素自增长（自动撑满父div）
+    */
+    .grow{
+        flex-grow: 1;  -webkit-flex-grow: 1;
+    }
+.border   { border: 1px #bebebe solid;    }
+.red-double-border   { border: 2px #f03c7b solid;    }
+.top-border   { border-top: 1px #bebebe solid;    }
+.bottom-border{ border-bottom: 1px #bebebe solid; }
+.left-border  { border-left: 1px #bebebe solid;   }
+.right-border { border-right: 1px #bebebe solid;  }
+
+.red-top-border   { border-top: 1px #f03c7b solid;    }
+.red-bottom-border{ border-bottom: 1px #f03c7b solid; }
+.red-left-border  { border-left: 1px #f03c7b solid;   }
+.red-right-border { border-right: 1px #f03c7b solid;  }
+
+.top-margin    { margin-top: 8px;    }
+.bottom-margin { margin-bottom: 8px; }
+.left-margin   { margin-left: 8px;   }
+.right-margin  { margin-right: 8px;  }
+.top-padding    { padding-top: 8px;    }
+.bottom-padding { padding-bottom: 8px; }
+.left-padding   { padding-left: 8px;   }
+.right-padding  { padding-right: 8px;  }
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+select{
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    background:none;
+    padding:0;
+    margin:0;
+}
+
+/*placeholder颜色设置*/
+/* WebKit browsers */
+::-webkit-input-placeholder {color:#a3a3a3;}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder { color:#a3a3a3;}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder { color:#a3a3a3;}
+/* Internet Explorer 10+ */
+:-ms-input-placeholder { color:#a3a3a3;}
+select.placeholder{  color:#a3a3a3;  }
+
+.hidden{display:none;}
+
+.relative{  position: relative;  }
+.absolute{  position: absolute;  }
+.z--1{  z-index: -1;  }
+.z-1{  z-index: 1;  }
+.z-2{  z-index: 2;  }
+.z-3{  z-index: 3;  }
+.z-10{  z-index: 10;  }
+.z-100{  z-index: 100;  }
+
+.no-scroll{  overflow: hidden;  }
+.no-scroll-y{  overflow-y: hidden;  }
+.no-scroll-x{  overflow-x: hidden;  }
